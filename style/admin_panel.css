@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+}
+
+main {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.admin-panel {
+    text-align: center;
+}
+
+.admin-panel h1 {
+    margin-bottom: 20px;
+}
+
+.admin-panel h2 {
+    margin-bottom: 10px;
+}
+
+.admin-panel a {
+    display: block;
+    margin: 10px 0;
+}
+
+.admin-panel table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+.admin-panel th,
+.admin-panel td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.admin-panel th {
+    background-color: #f2f2f2;
+}
+
+.admin-panel a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.admin-panel a:hover {
+    text-decoration: underline;
+}
+
+.admin-panel {
+    margin-bottom: 40px;
+}
+

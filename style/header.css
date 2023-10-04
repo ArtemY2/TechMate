@@ -1,0 +1,200 @@
+:root {
+  --techmate: #68EBD3;
+}
+
+* {
+  margin: auto;
+  max-width: 797px;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  outline: none;
+  transition: .2s linear;
+}
+
+html {
+  font-size: 66.67%;
+  overflow: visible;
+}
+
+header {
+  height: 126.67px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 19.33px;
+}
+
+.header_logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: bolder;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.search-form {
+  border: 0.89px solid #68EBD3;
+  display: inline-flex;
+  padding: 0 13.33px;
+  justify-content: space-between;
+  height: 33.34px;
+  border-radius: 3.34px;
+  overflow: hidden;
+  background-color: white;
+  margin-left: 60px;
+  width: 300px;
+}
+
+.search-form_txt {
+  border: none;
+  width: 89.34px;
+  outline: none;
+  font-size: 13.34px;
+  background-color: transparent;
+  margin-left: 1px;
+}
+
+.search-form_btn {
+  border: none;
+  background-color: transparent;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-form_btn {
+  margin-left: 10px;
+}
+
+.search-form_btn i {
+  margin-left: 5px;
+}
+
+.search-form_txt {
+  flex: 1;
+}
+
+.login {
+  font-size: 13.34px;
+  display: flex;
+  align-items: center;
+}
+
+.login p {
+  margin: 0;
+  margin-right: 6.67px;
+}
+
+.login a {
+  color: #586069;
+  text-decoration: none;
+}
+
+.login a:hover {
+  text-decoration: underline;
+}
+
+.login .fa-user {
+  margin-right: 3.34px;
+  font-size: 10.67px;
+}
+
+.cart {
+  margin-left: 13.33px;
+}
+
+.header_ght {
+  clear: both;
+}
+
+.navbar {
+  display: flex;
+  color: #fff;
+  padding: 6.67px 19.33px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 6.67px;
+}
+
+.logout-link:hover {
+  color: var(--techmate);
+}
+
+.login-link:hover,
+.register-link:hover {
+  color: var(--techmate);
+}
+
+header .cart {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+header .cart a {
+  color: black;
+}
+
+header .cart a:hover {
+  color: var(--techmate);
+}
+
+header .login {
+  margin-left: 30px;
+}
+
+header .logo span {
+  color: var(--techmate);
+}
+
+header .navbar a {
+  padding: 0 1.33rem;
+  font-weight: 95;
+  font-size: 16px;
+  margin-right: 22.67px;
+  color: #666;
+}
+
+header .navbar {
+  padding: 0 1.33rem;
+  font-weight: 95;
+  font-size: 16px;
+  margin-top: 8px;
+  margin-right: 22.67px;
+  color: #666;
+}
+
+header .navbar a:hover {
+  color: var(--techmate);
+}
+
+footer {
+  padding-top: 23.33px;
+  margin-top: auto;
+  text-align: center;
+  max-width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
