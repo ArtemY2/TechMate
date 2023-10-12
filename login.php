@@ -176,6 +176,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <button type="submit">Log in</button>
     New to TechMate? <a href="signup.html" class="ca">Create an account.</a>
 </form>
+>
 
     
 </body>

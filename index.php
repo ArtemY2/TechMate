@@ -80,5 +80,7 @@ if (isset($_SESSION["user_id"])) {
     <footer>
     <?php include 'footer.php'; ?>
     </footer>
+<table>
+</table>
  </body>
  </html>

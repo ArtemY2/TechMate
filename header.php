@@ -23,7 +23,7 @@
                                 <?php if ($user['role'] === 'admin'): ?>
                                     <p>Hello Admin: <?= htmlspecialchars($user["name"]) ?></p>
                                     <p><a href="logout.php" class="logout-link">Log out</a></p>
-                                    <p><a href="admin_panel.php" class="add-product-link">Admin Panel</a></p>
+                                    <p><a href="admin/admin_panel.php" class="add-product-link">Admin Panel</a></p>
                                 <?php else: ?>
                                     <p>Hello <?= htmlspecialchars($user["name"]) ?></p>
                                     <p><a href="logout.php" class="logout-link">Log out</a></p>

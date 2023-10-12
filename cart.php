@@ -3,7 +3,6 @@ require_once "session.php";
 require_once "update_cart.php";
 $mysqli = require __DIR__ . "/database.php";
 
-
 $userId = isset($user) ? $user['id'] : 0;
 $sql = "SELECT cart.id, products.id AS product_id, products.name, products.price, cart.quantity FROM cart
         INNER JOIN products ON cart.product_id = products.id
@@ -78,11 +77,57 @@ function calculateTotal($cartProducts) {
                     }
                 });
             });
+
+            $('form').on('submit', function(e) {
+                e.preventDefault();
+                var form = this;
+
+                var productId = $(form).find('.quantity-input').data('product-id');
+                var quantity = $(form).find('.quantity-input').val();
+
+                $.ajax({
+                    url: 'update_cart.php',
+                    method: 'POST',
+                    data: {
+                        update_product_id: productId,
+                        update_quantity: quantity
+                    },
+                    success: function(response) {
+                        location.reload();
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(error);
+                    }
+                });
+
+                if ($(form).attr('action') === '<?php echo $_SERVER['PHP_SELF']; ?>') {
+                    var name = $(form).find('#name').val();
+                    var address = $(form).find('#address').val();
+                    var phone = $(form).find('#phone').val();
+                    var payment = $(form).find('#payment').val();
+
+                    $.ajax({
+                        url: $(form).attr('action'),
+                        method: 'POST',
+                        data: {
+                            name: name,
+                            address: address,
+                            phone: phone,
+                            payment: payment
+                        },
+                        success: function(response) {
+                            $('#message').text("Your order has been placed successfully.");
+                        },
+                        error: function(xhr, status, error) {
+                            console.error(error);
+                        }
+                    });
+                }
+            });
         });
     </script>
-    <style>
-        
-.checkout-section {
+  <style>
+    .checkout-section {
         margin-top: 20px;
     }
 
@@ -121,11 +166,15 @@ function calculateTotal($cartProducts) {
         font-size: 16px;
     }
 
-    .checkout-section button:hover {
-        background-color: #45a049;
-    }
+   .checkout-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+</style>
 
-    </style>
 </head>
 <body>
     <?php include 'header.php'; ?>
@@ -189,6 +238,8 @@ function calculateTotal($cartProducts) {
                 <button type="submit">Place Order</button>
             </form>
         </div>
+
+        <div id="message"></div>
     </main>
 </body>
 </html>

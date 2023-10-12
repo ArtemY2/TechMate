@@ -1,0 +1,99 @@
+/* Изменен цвет фона страницы и шрифта */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+}
+/* Обновленные стили для контейнера */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  flex-wrap: nowrap; /* Отключите перенос элементов */
+}
+
+/* Обновленные стили для формы добавления продукта */
+.add-product {
+  max-width: 600px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  transform: scale(1);
+  text-align: center;
+  flex: 1; /* Добавьте свойство flex для распределения доступного пространства */
+}
+
+
+/* Анимация для формы при наведении */
+.add-product:hover {
+  transform: scale(1.02);
+}
+
+.add-product h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.add-product form .form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-product form .form-group label {
+  font-weight: bold;
+}
+
+.add-product form .form-group input,
+.add-product form .form-group textarea,
+.add-product form .form-group select {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+  background: transparent;
+  transition: border-color 0.3s ease;
+}
+
+.add-product form .form-group input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.add-product form .form-group input[type="submit"]:hover {
+  background-color: #000;
+}
+
+/* Стили для сообщения об успехе и ошибке */
+.success {
+  background-color: #5cb85c;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.error {
+  color: #d9534f;
+  background-color: #f2dede;
+  border: 1px solid #ebccd1;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
